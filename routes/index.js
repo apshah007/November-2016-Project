@@ -1,7 +1,9 @@
 var express = require('express');
 var router = express.Router();
+/*
 var User = require('../models/user');
 var mid = require('../middleware');
+*/
 
 // GET /profile
 router.get('/profile', mid.requiresLogin, function(req, res, next) {
@@ -56,7 +58,7 @@ router.post('/login', function(req, res, next) {
 
 // GET /register
 router.get('/register', mid.loggedOut, function(req, res, next) {
-  return res.render('register', { title: 'Sign Up' });
+  return res.render('registration', { title: 'Sign Up' });
 });
 
 // POST /register
@@ -66,10 +68,10 @@ router.post('/registration', function(req, res, next) {
     req.body.phone &&
     req.body.address &&
     req.body.password &&
-    req.body.confirmPassword) {
+    req.body.password2) {
 
       // confirm that user typed same password twice
-      if (req.body.password !== req.body.confirmPassword) {
+      if (req.body.password !== req.body.password2) {
         var err = new Error('Passwords do not match.');
         err.status = 400;
         return next(err);

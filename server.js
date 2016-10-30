@@ -4,13 +4,13 @@ var mongoose = require('mongoose');
 var session = require('express-session');
 var app = express();
 
-// use sessions for tracking logins
+/* use sessions for tracking logins
 app.use(session({
   secret: 'treehouse loves you',
   resave: true,
   saveUninitialized: false
 }));
-
+*/
 // make user ID available in templates
 app.use(function (req, res, next) {
   res.locals.currentUser = req.session.userId;
