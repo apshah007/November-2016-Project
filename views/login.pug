@@ -1,0 +1,57 @@
+doctype html
+html
+  body
+    meta(charset='UTF-8')
+    head
+      title
+        | Community Volunteer Group
+      link(rel='icon', href='pics/fleur.png')
+      script(src='http://code.jquery.com/jquery-3.1.1.slim.min.js')
+      // adding bootrap cdn - Latest compiled and minified CSS
+      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+      // Optional theme
+      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css', integrity='sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp', crossorigin='anonymous')
+      // Latest compiled and minified JavaScript
+      script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+      script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+      script(src='move.js')
+      link(rel='stylesheet', href='style.css')
+    // form to collect information about username and password
+    .container
+      //
+        <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>
+        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+        </fb:login-button>
+      #status
+      h2 Enter your information
+      form(action='/login', method='post')
+        .form-group
+          label(for='email') Username:
+          input.form-control(type='email', name='username', placeholder='Enter username')
+        .form-group
+          label(for='pwd') Password:
+          input.form-control(type='password', name='pwd', placeholder='Enter password')
+        .checkbox
+          label
+            input(type='checkbox')
+            |  Remember me
+        button.btn.btn-default(type='submit', value='submit') Submit
+    //
+      to send the information to the passport.js file about username and password for local authenication
+      <script>
+      var xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function(){
+      if (xhr.readyState === 4){
+      document.getElementById('username').innerHTML = xhr.responseText;
+      }
+      };
+      xhr.open('POST', 'passport.js');
+      xhr.send(username);
+      xhr.onreadystatechange = function(){
+      if (xhr.readyState === 4){
+      document.getElementById('password').innerHTML = xhr.responseText;
+      }
+      };
+      xhr.open('POST', 'passport.js');
+      xhr.send(password);
+      </script>

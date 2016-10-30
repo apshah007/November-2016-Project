@@ -1,0 +1,238 @@
+
+/*colors for the body and text */
+
+body{
+  font-family: helvetica,sans-serif;
+  background-color: red;
+}
+
+/*
+.logo{
+  width:300px;height:400px
+}
+*/
+h1{
+  font-family: helvetica,sans-serif;
+  color: black;
+}
+
+h2{
+  font-family: helvetica,sans-serif;
+  color: black;
+}
+h3{
+  font-family: helvetica,sans-serif;
+  color: black;
+}
+h4{
+  font-family: helvetica,sans-serif;
+  color: black;
+}
+
+h5{
+  font-family: helvetica,sans-serif;
+  color: black;
+}
+h6{
+  font-family: helvetica,sans-serif;
+  color: black;
+}
+
+blockquote{
+  font-family: helvetica,sans-serif;
+  color: black;
+}
+
+a{
+  font-family: helvetica,sans-serif;
+  color: black;
+}
+
+p{
+  font-family: helvetica,sans-serif;
+  color: black;
+}
+
+.container-fluid{
+  background-color: red;
+}
+/* buttons not used in the volunteer page
+.button {
+  font-family: helvetica,sans-serif;
+  font-size: 14px;
+  width: 100px;
+  position: relative;
+  margin: 1em;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 10px #ccc;
+  overflow: hidden;
+}
+*/
+/* buttons not used in the volunteer page
+.button2 {
+  background-color: yellow;
+  font-family: helvetica,sans-serif;
+  font-size: 14px;
+  width: 300px;
+  position: center;
+  margin:5em;
+  border-width: 10em;
+  border: 10px solid black;
+  box-shadow: 2px 2px 10px black;
+  overflow: hidden;
+}
+*/
+
+/* for styling the pictures in the carousel box */
+.cPics {
+  height: 600px;
+  width: 850px;
+}
+
+/* for styling the carouselbox div */
+.carouselbox {
+  font-family: helvetica,sans-serif;
+  font-size: 14px;
+  width: 600px;
+  height: 850px;
+  position: relative;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 10px #ccc;
+  overflow: hidden;
+  background-color: white;
+  /*location: center;*/
+}
+
+/* for styling the navigation bar */
+nav ul{
+  list-style: none;
+  margin:0 10px;
+  padding:0;
+}
+nav li{
+  display: inline-block;
+  font-weight:800;
+  //padding 30px 20px;
+  margin:1em;
+}
+
+.content {
+  margin: 0;
+  padding: 0;
+}
+.content li {
+  font-size: 100px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+  text-align: center;
+}
+.active {
+  height: 600px;
+  width: 850px;
+}
+.active li {
+  position: absolute;
+  top: 1000px;
+  width:200px;
+}
+.active li.current {
+  top: 30px;
+}
+
+/* part of the div containing the navigation buttons */
+.active .cButtons {
+  padding: 0, 0;
+  background: white;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+  height:20px;
+  width:200px;
+
+}
+
+/* for styling of the previous button */
+.prev{
+  padding: 0, 0;
+  background: white;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+  height:20px;
+  width:100px;
+  float: left;
+}
+/* for styling of the next button */
+.next{
+  padding: 0, 0;
+  background: white;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+  height:20px;
+  width:100px;
+  float: right;
+
+/* buttons involved in styling the movement of the carousel box */
+.cOffscreen{
+  padding: 0, 0;
+  background: white;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+  height:20px;
+  width:100px
+
+}
+
+.carouselbox cButton {
+  border: none;
+  display: none;
+  width: 50px;
+  height:50px;
+
+}
+.active cButton {
+  display: block;
+}
+.offscreen {
+  position: absolute;
+  left: -2000px;
+}
+
+.active li {
+  position: absolute;
+  top: 130px;
+
+  opacity: 0;
+  transform: scale(0);
+  transition: 1s;
+}
+.active li.current {
+  top: 30px;
+
+  opacity: 1;
+  transform: scale(1);
+  transition: 1s;
+}
+
+.active li {
+  position: absolute;
+  top: 130px;
+
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0);
+  transition: 1s;
+}
+.active li.current {
+  top: 30px;
+
+  pointer-events: auto;
+  opacity: 1;
+  transform: scale(1);
+  transition: 1s;
+}

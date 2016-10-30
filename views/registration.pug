@@ -1,0 +1,38 @@
+doctype html
+html
+  meta(charset='UTF-8')
+  head
+    title
+      | Community Volunteer Group
+    link(rel='icon', href='pics/fleur.png')
+    // adding bootrap cdn - Latest compiled and minified CSS
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    // Optional theme
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css', integrity='sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp', crossorigin='anonymous')
+    // Latest compiled and minified JavaScript
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+    link(rel='stylesheet', href='style.css')
+  body
+    // information collection about new volunteers
+    .container(method='post' action ='/register')
+      h2 Enter your information
+      form
+        .form-group
+          label(for='email') Name
+          input#username.form-control(type='email', placeholder='Enter name')
+        .form-group
+          label(for='pwd') Phone
+          input#phone.form-control(type='phone', placeholder='Enter phone')
+        .form-group
+          label(for='email') Email
+          input#username.form-control(type='email', placeholder='Enter email')
+        .form-group
+          label(for='pwd') Address
+          input#address.form-control(type='address', placeholder='Enter address')
+        .form-group
+          label(for='pwd') Password
+          input#pwd.form-control(type='password', placeholder='Enter password')
+        .form-group
+          label(for='pwd') Password
+          input#pwd2.form-control(type='password2', placeholder='Reenter password')
+        button.btn.btn-default(type='submit') Submit
