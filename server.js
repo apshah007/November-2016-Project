@@ -10,13 +10,12 @@ app.use(session({
   resave: true,
   saveUninitialized: false
 }));
-*/
 // make user ID available in templates
 app.use(function (req, res, next) {
   res.locals.currentUser = req.session.userId;
   next();
 });
-
+*/
 // mongodb connection
 mongoose.connect("mongodb://localhost:27017/newvolunteer");
 var db = mongoose.connection;
@@ -33,6 +32,13 @@ app.use(express.static(__dirname + '/public'));
 // view engine setup
 app.set('view engine', 'pug');
 app.set('views', __dirname + '/views');
+
+
+//for trying to render the index.pug file
+app.get('/', function (req, res) {
+  res.render('index', { title: 'index', message: 'Hello there!'})
+ })
+
 
 // include routes
 var routes = require('./routes/index');

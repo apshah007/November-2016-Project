@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var User = require('../models/user');
-var mid = require('../middleware');
+var mid = require('../middleware/middle');
 
 // GET /profile
 router.get('/profile', mid.requiresLogin, function(req, res, next) {
@@ -11,7 +11,8 @@ router.get('/profile', mid.requiresLogin, function(req, res, next) {
         if (error) {
           return next(error);
         } else {
-          return res.render('profile', { title: 'Profile', name: user.name, favorite: user.favoriteBook });
+          return res.render('profile', {title:'Profile', name: user.name, email: user.email, address:user.address, phone: user.phone, password: user.password});
+          //{ title: 'Profile', name: user.name, favorite: user.favoriteBook }
         }
       });
 });
