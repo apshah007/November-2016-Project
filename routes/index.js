@@ -68,10 +68,10 @@ router.post('/registration', function(req, res, next) {
     req.body.phone &&
     req.body.address &&
     req.body.password &&
-    req.body.password2) {
+    req.body.confirmPassword) {
 
       // confirm that user typed same password twice
-      if (req.body.password !== req.body.password2) {
+      if (req.body.password !== req.body.confirmPassword) {
         var err = new Error('Passwords do not match.');
         err.status = 400;
         return next(err);
@@ -85,6 +85,8 @@ router.post('/registration', function(req, res, next) {
         address: req.body.address,
         password: req.body.password
       };
+
+
 
       // use schema's `create` method to insert document into Mongo
       User.create(userData, function (error, user) {
@@ -103,19 +105,30 @@ router.post('/registration', function(req, res, next) {
     }
 })
 
-// GET /
-router.get('/', function(req, res, next) {
+// GET /index
+router.get('/index', function(req, res, next) {
+//  console.log("I'm here!");
   return res.render('index', { title: 'Home' });
 });
 
-// GET /about
-router.get('/about', function(req, res, next) {
-  return res.render('about', { title: 'About' });
+// GET /upload
+router.get('/upload', function(req, res, next) {
+  return res.render('upload', { title: 'upload' });
 });
 
-// GET /contact
-router.get('/contact', function(req, res, next) {
-  return res.render('contact', { title: 'Contact' });
+// GET /current
+router.get('/current', function(req, res, next) {
+  return res.render('current', { title: 'Current' });
 });
+
+// GET /hours
+router.get('/hours', function(req, res, next) {
+  return res.render('hours', { title: 'hours' });
+});
+
+
 
 module.exports = router;
+
+//prints all the users to the screen
+//var collection = db.userData.find( );

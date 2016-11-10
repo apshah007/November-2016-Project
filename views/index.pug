@@ -1,116 +1,143 @@
-<!--Volunteer website with sign up and carousel of past volunteer projects-->
-<!DOCTYPE html>
-
-  <head>
-    <meta charset="UTF-8">
-
-    <title>FUSION 502 Louisville Volunteer Group
-    </title>
-    <link rel="icon" href="pics/fleur.png">
-
-
-      <!-- adding bootrap cdn - Latest compiled and minified CSS -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-      <!-- Optional theme -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-      <!-- Latest compiled and minified JavaScript -->
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-      <img src="pics/fusion.jpg" alt="logo" style= "width:400px; height:350px; margin:50px; padding:50px; shadow:20px">  <!--these will be attached to photos that are buttons you can click on-->
-
-    <!--<h1><center>FUSION 502</center></h1>
-    <h2><center>Louisville Volunteer Group</center></h2>
-    <blockquote><center><h2><i>"Service to others is the rent you pay for your room here on Earth."</center><br><center>-- Muhammad Ali</center></i></h2></center></blockquote>
-  -->
-
-  <!--  <h2>This is a group of volunteers from our community that meets regularly to give service to the area in different ways.</h2>
-  -->
-  <!-- Creates a nav bar for quick links-->
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <ul id="navlist">
-            <li id= "events"><a href="current.html">Current volunteer events</a></li>
-            <li id= "register"><a href="registration.html">Register to be a volunteer</a></li>
-            <li id= "upload"><a href="login.html">Upload your pictures</a></li>
-            <li id= "pictures"><a href="index.html #currentPictures">Past volunteer pictures</a></li>
-            <li id= "benefits"><a href="index.html #idBenefits">Benefits of Volunteering</a></li>
-            <li id= "currentVolunteers"><a href="login.html">Current volunteers</a></li>
-          </ul>
-          </a>
-        </div>
-      </div>
-    </nav>
-
-    <h3>About Us</h3>
-    <h4><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at pharetra est. Nunc ornare cursus velit, eget bibendum mauris fringilla sed. Nam lacinia aliquam pellentesque. Quisque vehicula nec quam ut hendrerit. Quisque consectetur elit turpis, vitae ultricies libero viverra tempor. Sed at turpis imperdiet, faucibus lectus nec, bibendum orci. Aliquam vel vulputate est. Proin iaculis tincidunt enim eu auctor. Maecenas viverra convallis auctor. Integer tincidunt mattis lacus, vel tempus ligula interdum ac. Suspendisse potenti. Vivamus laoreet ex mi, id condimentum ante tincidunt non. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla scelerisque nisl non nisi tempus molestie. Ut ac lectus pharetra, finibus lacus id, mollis sapien. Phasellus aliquet augue vel elit luctus, in aliquam velit luctus.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at pharetra est. Nunc ornare cursus velit, eget bibendum mauris fringilla sed. Nam lacinia aliquam pellentesque. Quisque vehicula nec quam ut hendrerit. Quisque consectetur elit turpis, vitae ultricies libero viverra tempor. Sed at turpis imperdiet, faucibus lectus nec, bibendum orci. Aliquam vel vulputate est. Proin iaculis tincidunt enim eu auctor. Maecenas viverra convallis auctor. Integer tincidunt mattis lacus, vel tempus ligula interdum ac. Suspendisse potenti. Vivamus laoreet ex mi, id condimentum ante tincidunt non. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla scelerisque nisl non nisi tempus molestie. Ut ac lectus pharetra, finibus lacus id, mollis sapien. Phasellus aliquet augue vel elit luctus, in aliquam velit luctus.</p>
-    </h4>
-    <hr></hr>
-
-    <!--creates links to volunteer events individually on the current events page-->
-    <center><h3>Fall and Winter Volunteer Events</h3></center>
-    <center><h4>Current Volunteers, sign up below!</h4></center>
-    <img src="pics/leaves.jpg" alt="leaves" style="width:450px;height:500px;" align=left>
-    <img src="pics/christmas_tree.jpg" alt="leaves" style="width:450px;height:500px;" align=right>
-    <center><ul type="event"><h4><a href="current.html #homeless">Helping at a homeless shelter</a></h4></ul></center>  <!--these will be attached to photos that are buttons you can click on-->
-    <center><ul type="event"><h4><a href="current.html #cleaning">Cleaning near the river</a></h4></ul></center>
-    <center><ul type="event"><h4><a href="current.html #donating">Donating school supplies to children</a></h4></ul></center>
-    <center><ul type="event"><h4><a href="current.html #elderly">Making food baskets for the elderly</a></h4></ul></center>
-    <center><ul type="event"><h4><a href="current.html #singing">Singing Christmas carols to terminally ill people</a></h4></ul></center>
-    <center><ul type="event"><h4><a href="current.html #writing">Writing letters to soldiers</a></h4></ul></center>
-
-    <hr> </hr>
-    <!-- adds link to current volunteers page-->
-    <center><ul type="event"><h4><a href="login.html #hours">Current Volunteers</a></h4></ul></center>
-    <hr> </hr>
-    <!-- adds link to registration page -->
-    <center><img src="pics/arrow.jpg" alt="arrow" style="width:200p;height:200px;"></center>
-    <center><ul type="event"><h3><a href="registration.html">Register to be a volunteer!</a></h3></ul></center>  <!-- this will be a button going to a form-->
-    <h3 id="idBenefits">Benefits of Volunteering</h3>
-    <p><h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at pharetra est. Nunc ornare cursus velit, eget bibendum mauris fringilla sed. Nam lacinia aliquam pellentesque. Quisque vehicula nec quam ut hendrerit. Quisque consectetur elit turpis, vitae ultricies libero viverra tempor. Sed at turpis imperdiet, faucibus lectus nec, bibendum orci. Aliquam vel vulputate est. Proin iaculis tincidunt enim eu auctor. Maecenas viverra convallis auctor. Integer tincidunt mattis lacus, vel tempus ligula interdum ac. Suspendisse potenti. Vivamus laoreet ex mi, id condimentum ante tincidunt non. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla scelerisque nisl non nisi tempus molestie. Ut ac lectus pharetra, finibus lacus id, mollis sapien. Phasellus aliquet augue vel elit luctus, in aliquam velit luctus.</h4></p>
-    <hr> </hr>
-
-<!-- creates a carousel to show pictures with an upload button to also upload pictures-->
-    <center><h3 id="currentPictures">Pictures From Our Past Volunteer Events</h3></center>
-    <center><ul type="event"><h3><a href="upload.html">Upload your volunteer pics!</a></h3></ul></center>  <!-- this will be a button going to a form-->
-
-    <div class="carouselbox">
-    <div class="cButtons">
-    <button class="prev">
-      <span class="cOffscreen">Previous</span>
-    </button>
-    <button class="next">
-      <span class="cOffscreen">Next</span>
-    </button>
-  </div>
-
-  <ol class="content">
-    <li class= cPics> <img src="pics/bikes.jpg" alt="bikes"  ></li>
-    <li class= cPics> <img src="pics/bridge.jpg" alt="bridge" ></li>
-    <li class= cPics> <img src="pics/building.jpg" alt="building" ></li>
-    <li class= cPics > <img src="pics/exit.jpg" alt="exit"  ></li>
-    <li class= cPics> <img src="pics/nyc.jpg" alt="leaves"  align=left></li>
-    <li class= cPics> <img src="pics/pipe.jpg" alt="leaves"  align=left></li>
-    <li class= cPics> <img src="pics/road.jpg" alt="leaves" align=left></li>
-    <li class= cPics > <img src="pics/rubbish.jpg" alt="leaves"  align=left></li>
-  </ol>
-</div
-
-
-<br></br>
-<br></br>
-<br></br>
-<br></br>
-<center><h6> This website created by Amy Shah 2016 </h6></center>
-  </body>
-  <script   src="http://code.jquery.com/jquery-3.1.1.slim.min.js"
-  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="   crossorigin="anonymous"></script>
-  <script src = "app.js">  </script>
-
-  </body>
-</html>
+doctype html
+html
+  // Volunteer website with sign up and carousel of past volunteer projects
+  head
+    meta(charset='UTF-8')
+    title
+      | FUSION 502 Louisville Volunteer Group
+    link(rel='icon', href='pics/fleur.jpg')
+    // adding bootrap cdn - Latest compiled and minified CSS
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    // Optional theme
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css', integrity='sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp', crossorigin='anonymous')
+    // Latest compiled and minified JavaScript
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+    link(rel='stylesheet', href='style.css')
+  body
+    img(src='pics/fusion.jpg', alt='logo', style='width:400px; height:350px; margin:50px; padding:50px; shadow:20px')
+    // these will be attached to photos that are buttons you can click on
+    //
+      <h1><center>FUSION 502</center></h1>
+      <h2><center>Louisville Volunteer Group</center></h2>
+      <blockquote><center><h2><i>"Service to others is the rent you pay for your room here on Earth."</center><br><center>-- Muhammad Ali</center></i></h2></center></blockquote>
+    //
+      <h2>This is a group of volunteers from our community that meets regularly to give service to the area in different ways.</h2>
+    // Creates a nav bar for quick links
+    nav.navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          ul#navlist
+            li#events
+              a(href='current') Current volunteer events
+            li#register
+              a(href='register') Register to be a volunteer
+            li#upload
+              a(href='login') Upload your pictures
+            li#pictures
+              a(href='index#currentPictures') Past volunteer pictures
+            li#benefits
+              a(href='index#idBenefits') Benefits of Volunteering
+            li#currentVolunteers
+              a(href='login') Current volunteers
+    h3 About Us
+    h4
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at pharetra est. Nunc ornare cursus velit, eget bibendum mauris fringilla sed. Nam lacinia aliquam pellentesque. Quisque vehicula nec quam ut hendrerit. Quisque consectetur elit turpis, vitae ultricies libero viverra tempor. Sed at turpis imperdiet, faucibus lectus nec, bibendum orci. Aliquam vel vulputate est. Proin iaculis tincidunt enim eu auctor. Maecenas viverra convallis auctor. Integer tincidunt mattis lacus, vel tempus ligula interdum ac. Suspendisse potenti. Vivamus laoreet ex mi, id condimentum ante tincidunt non. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla scelerisque nisl non nisi tempus molestie. Ut ac lectus pharetra, finibus lacus id, mollis sapien. Phasellus aliquet augue vel elit luctus, in aliquam velit luctus.
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at pharetra est. Nunc ornare cursus velit, eget bibendum mauris fringilla sed. Nam lacinia aliquam pellentesque. Quisque vehicula nec quam ut hendrerit. Quisque consectetur elit turpis, vitae ultricies libero viverra tempor. Sed at turpis imperdiet, faucibus lectus nec, bibendum orci. Aliquam vel vulputate est. Proin iaculis tincidunt enim eu auctor. Maecenas viverra convallis auctor. Integer tincidunt mattis lacus, vel tempus ligula interdum ac. Suspendisse potenti. Vivamus laoreet ex mi, id condimentum ante tincidunt non. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla scelerisque nisl non nisi tempus molestie. Ut ac lectus pharetra, finibus lacus id, mollis sapien. Phasellus aliquet augue vel elit luctus, in aliquam velit luctus.
+    hr
+    // creates links to volunteer events individually on the current events page
+    center
+      h3 Fall and Winter Volunteer Events
+    center
+      h4 Current Volunteers, sign up below!
+    img(src='pics/leaves.jpg', alt='leaves', style='width:450px;height:500px;', align='left')
+    img(src='pics/christmas_tree.jpg', alt='leaves', style='width:450px;height:500px;', align='right')
+    center
+      ul(type='event')
+        h4
+          a(href='current#homeless') Helping at a homeless shelter
+    // these will be attached to photos that are buttons you can click on
+    center
+      ul(type='event')
+        h4
+          a(href='current#cleaning') Cleaning near the river
+    center
+      ul(type='event')
+        h4
+          a(href='current#donating') Donating school supplies to children
+    center
+      ul(type='event')
+        h4
+          a(href='current#elderly') Making food baskets for the elderly
+    center
+      ul(type='event')
+        h4
+          a(href='current#singing') Singing Christmas carols to terminally ill people
+    center
+      ul(type='event')
+        h4
+          a(href='current#writing') Writing letters to soldiers
+    hr
+    // adds link to current volunteers page
+    center
+      ul(type='event')
+        h4
+          a(href='login#hours') Current Volunteers
+    hr
+    // adds link to registration page
+    center
+      img(src='pics/arrow.jpg', alt='arrow', style='width:200p;height:200px;')
+    center
+      ul(type='event')
+        h3
+          a(href='register') Register to be a volunteer!
+    // this will be a button going to a form
+    h3#idBenefits Benefits of Volunteering
+    p
+    h4
+      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at pharetra est. Nunc ornare cursus velit, eget bibendum mauris fringilla sed. Nam lacinia aliquam pellentesque. Quisque vehicula nec quam ut hendrerit. Quisque consectetur elit turpis, vitae ultricies libero viverra tempor. Sed at turpis imperdiet, faucibus lectus nec, bibendum orci. Aliquam vel vulputate est. Proin iaculis tincidunt enim eu auctor. Maecenas viverra convallis auctor. Integer tincidunt mattis lacus, vel tempus ligula interdum ac. Suspendisse potenti. Vivamus laoreet ex mi, id condimentum ante tincidunt non. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla scelerisque nisl non nisi tempus molestie. Ut ac lectus pharetra, finibus lacus id, mollis sapien. Phasellus aliquet augue vel elit luctus, in aliquam velit luctus.
+    p
+    hr
+    // creates a carousel to show pictures with an upload button to also upload pictures
+    center
+      h3#currentPictures Pictures From Our Past Volunteer Events
+    center
+      ul(type='event')
+        h3
+          a(href='login') Upload your volunteer pics!
+    // this will be a button going to a form
+    .carouselbox
+      .cButtons
+        button.prev
+          span.cOffscreen Previous
+        button.next
+          span.cOffscreen Next
+      ol.content
+        li.cPics
+          img(src='pics/bikes.jpg', alt='bikes')
+        li.cPics
+          img(src='pics/bridge.jpg', alt='bridge')
+        li.cPics
+          img(src='pics/building.jpg', alt='building')
+        li.cPics
+          img(src='pics/exit.jpg', alt='exit')
+        li.cPics
+          img(src='pics/nyc.jpg', alt='leaves', align='left')
+        li.cPics
+          img(src='pics/pipe.jpg', alt='leaves', align='left')
+        li.cPics
+          img(src='pics/road.jpg', alt='leaves', align='left')
+        li.cPics
+          img(src='pics/rubbish.jpg', alt='leaves', align='left')
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    center
+      h6  This website created by Amy Shah 2016
+  script(src='http://code.jquery.com/jquery-3.1.1.slim.min.js', integrity='sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=', crossorigin='anonymous')
+  script(src='app.js')

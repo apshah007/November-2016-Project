@@ -3,8 +3,12 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var session = require('express-session');
 var app = express();
+require('./seed.js');
 
-/* use sessions for tracking logins
+
+
+/*
+//use sessions for tracking logins
 app.use(session({
   secret: 'treehouse loves you',
   resave: true,
@@ -16,11 +20,14 @@ app.use(function (req, res, next) {
   next();
 });
 */
+
+
 // mongodb connection
 mongoose.connect("mongodb://localhost:27017/newvolunteer");
 var db = mongoose.connection;
 // mongo error
 db.on('error', console.error.bind(console, 'connection error:'));
+
 
 // parse incoming requests
 app.use(bodyParser.json());
@@ -31,12 +38,12 @@ app.use(express.static(__dirname + '/public'));
 
 // view engine setup
 app.set('view engine', 'pug');
-app.set('views', __dirname + '/views');
 
+app.set('views', __dirname + '\\views');
 
 //for trying to render the index.pug file
 app.get('/', function (req, res) {
-  res.render('index', { title: 'index', message: 'Hello there!'})
+  res.render('index', { title: 'index'})
  })
 
 
