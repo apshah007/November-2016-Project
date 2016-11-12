@@ -54,9 +54,37 @@ areas.forEach(function(area, index){
 });
 */
 
+users.forEach(function(user, index){
+  User.find({}, function(err, users) {
+    if (!err && !users.length){
+      User.create({
+        name:user.name,
+        username:user.username,
+        password:user.password,
+        phone:user.phone,
+        address:user.address,
+        email:user.email
+      })
+    }
+  })
+})
+
+User.create({
+  name:"Amy Shah",
+  usermame:"Amy_Shah",
+  password:"sail",
+  phone:"555-555-5555",
+  address:"720 Dream St",
+  email:"apshah007@yahoo.com"
+  })
 
 
-
+/*
+for (var x=1, x < users.length, x++)  {
+  document.write(user.name, user.password, user.username, user.phone, user.address, user.email );
+  }
+*/
+/*
 users.forEach(function(user, index){
   User.find(user, function(err, dbUsers) {
     if (!err && !dbUsers.length) {
@@ -71,6 +99,8 @@ users.forEach(function(user, index){
     }
   });
 });
+*/
+
 
 
 /*
