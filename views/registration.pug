@@ -14,29 +14,29 @@ html
     link(rel='stylesheet', href='style.css')
   body
     // information collection about new volunteers
-    .container(method='post' action ='/register')
+    .container
       h2 Enter your information
-      form
+      form(method='post' action ='/profile')
         .form-group
           label(for='name') Name
-          input#username.form-control(type='name', placeholder='Enter name')
+          input#username.form-control(type='name', name= 'name', placeholder='Enter name')
         .form-group
           label(for='username') Username
-          input#username.form-control(type='username', placeholder='Enter name')
+          input#username.form-control(type='username', name= 'username', placeholder='Enter name')
         .form-group
           label(for='phone') Phone
-          input#phone.form-control(type='phone', placeholder='Enter phone')
+          input#phone.form-control(type='phone', name= 'phone', placeholder='Enter phone')
         .form-group
           label(for='email') Email
-          input#username.form-control(type='email', placeholder='Enter email')
+          input#username.form-control(type='email', name= 'email', placeholder='Enter email')
         .form-group
           label(for='address') Address
-          input#address.form-control(type='address', placeholder='Enter address')
+          input#address.form-control(type='address', name= 'address', placeholder='Enter address')
         .form-group
           label(for='password') Password
-          input#pwd.form-control(type='password', placeholder='Enter password')
+          input#pwd.form-control(type='password', name= 'password', placeholder='Enter password')
         .form-group
           label(for='password') Password
-          input#pwd2.form-control(type='Password', placeholder='Reenter password')
+          input#pwd2.form-control(type='password', name= 'confirmPassword', placeholder='Reenter password')
         button.btn.btn-default(type='submit') Submit
         script(src='http://code.jquery.com/jquery-3.1.1.slim.min.js', integrity='sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=', crossorigin='anonymous')

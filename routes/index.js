@@ -3,7 +3,7 @@ var router = express.Router();
 
 var User = require('../models/user');
 var mid = require('../middleware/middle');
-
+/*
 // GET /profile
 router.get('/profile', mid.requiresLogin, function(req, res, next) {
   User.findById(req.session.userId)
@@ -16,7 +16,8 @@ router.get('/profile', mid.requiresLogin, function(req, res, next) {
         }
       });
 });
-
+*/
+/*
 // GET /logout
 router.get('/logout', function(req, res, next) {
   if (req.session) {
@@ -35,8 +36,8 @@ router.get('/logout', function(req, res, next) {
 router.get('/login', mid.loggedOut, function(req, res, next) {
   return res.render('login', { title: 'Log In'});
 });
-
-// POST /login
+*/
+/* POST /login
 router.post('/login', function(req, res, next) {
   if (req.body.email && req.body.password) {
     User.authenticate(req.body.email, req.body.password, function (error, user) {
@@ -55,20 +56,40 @@ router.post('/login', function(req, res, next) {
     return next(err);
   }
 });
-
+*/
 // GET /register
-router.get('/register', mid.loggedOut, function(req, res, next) {
-  return res.render('registration', { title: 'Sign Up' });
+router.get('/register',/* mid.loggedOut,*/ function(req, res, next) {
+  return res.render('registration', { title: 'register' });
+  res.sendfile('profile');
+  console.log("register was called!");
 });
-
+/*
+app.get('/',function(req,res){
+  res.sendfile("index.html");
+*/
 // POST /register
-router.post('/registration', function(req, res, next) {
+router.post('/profile', function(req, res, next) {
+    console.log("profile was called!");
+  return res.render('profile', { title: 'profile' });
+     var name = req.body.name;
+     console.log(name);
+     var username = req.body.username;
+     var phone = req.body.phone;
+     var email = req.body.email;
+     var address = req.body.address;
+     var password = req.body.password;
+     var confirmPassword =req.body.confirmPassword;
+    console.log(name, username, phone, email, address, password);
+    console.log("after variables was called!");
+    res.end("yes");
+  });
+/*
   if (req.body.email &&
     req.body.name &&
     req.body.phone &&
     req.body.address &&
     req.body.password &&
-    req.body.password2) {
+    req.body.confirmPassword) {
 
       // confirm that user typed same password twice
       if (req.body.password !== req.body.password2) {
@@ -76,6 +97,7 @@ router.post('/registration', function(req, res, next) {
         err.status = 400;
         return next(err);
       }
+
 
       // create object with form input
       var userData = {
@@ -95,14 +117,13 @@ router.post('/registration', function(req, res, next) {
           return res.redirect('/profile');
         }
       });
-
-    } else {
+/*    } else {
       var err = new Error('All fields required.');
       err.status = 400;
       return next(err);
     }
 })
-
+*/
 // GET /
 router.get('/index', function(req, res, next) {
 //  console.log("I'm here!");
@@ -123,11 +144,11 @@ router.get('/current', function(req, res, next) {
 router.get('/hours', function(req, res, next) {
   return res.render('hours', { title: 'hours' });
 });
-// GET profile
+/* GET profile
 router.get('/profile', function(req, res, next) {
   return res.render('profile', { title: 'profile' });
 });
-
+*/
 
 module.exports = router;
 
