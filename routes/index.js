@@ -88,7 +88,9 @@ router.post('/profile', function(req, res, next) {
  User.create({name, username, phone, email, address, password});
 
 //    console.log("profile was called!");
- return res.render('profile', { title: 'profile' });
+ return res.render('profile', { title: 'profile', name:name,
+  username:username, phone:phone, address:address, email:email });
+//document.write(name, username, phone, email, address, password);
 
 //res.end("yes");
   });
