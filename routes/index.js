@@ -89,6 +89,7 @@ router.post('/profile', function(req, res, next) {
 
 //    console.log("profile was called!");
  return res.render('profile', { title: 'profile' });
+
 //res.end("yes");
   });
 
