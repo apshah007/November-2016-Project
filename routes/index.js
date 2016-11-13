@@ -69,19 +69,20 @@ app.get('/',function(req,res){
 */
 // POST /register
 router.post('/profile', function(req, res, next) {
+  var name = req.body.name;
+  console.log(name);
+  var username = req.body.username;
+  var phone = req.body.phone;
+  var email = req.body.email;
+  var address = req.body.address;
+  var password = req.body.password;
+  var confirmPassword =req.body.confirmPassword;
+ console.log(name, username, phone, email, address, password);
+ console.log("after variables was called!");
+
     console.log("profile was called!");
   return res.render('profile', { title: 'profile' });
-     var name = req.body.name;
-     console.log(name);
-     var username = req.body.username;
-     var phone = req.body.phone;
-     var email = req.body.email;
-     var address = req.body.address;
-     var password = req.body.password;
-     var confirmPassword =req.body.confirmPassword;
-    console.log(name, username, phone, email, address, password);
-    console.log("after variables was called!");
-    res.end("yes");
+res.end("yes");
   });
 /*
   if (req.body.email &&
