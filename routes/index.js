@@ -62,35 +62,83 @@ router.post('/login', function(req, res, next) {
 // GET /register
 router.get('/register',/* mid.loggedOut,*/ function(req, res, next) {
   return res.render('registration', { title: 'register' });
-  res.sendfile('profile');
-  console.log("register was called!");
+//  res.sendfile('profile');
+//  console.log("register was called!");
 });
 /*
 app.get('/',function(req,res){
   res.sendfile("index.html");
 */
 // POST /register
+// POST /register
+
 router.post('/profile', function(req, res, next) {
+
   var name = req.body.name;
-//  console.log(name);
+  console.log(name);
   var username = req.body.username;
   var phone = req.body.phone;
   var email = req.body.email;
   var address = req.body.address;
   var password = req.body.password;
   var confirmPassword =req.body.confirmPassword;
+
+ console.log(name, username, phone, email, address, password);
+ console.log("after variables was called!");
+ User.create({name, username, phone, email, address, password});
+
+//    console.log("profile was called!");
+ return res.render('profile', { title: 'profile' });
+//res.end("yes");
+  });
+
+
+    // use schema's `create` method to insert document into Mongo
+/*
+
+        //req.session.userId = user._id
+        return res.redirect('/profile');
+
+      };
+*/
+/*
+  console.log("there");
+  var userData = {
+   name: req.body.name,
+//  console.log(name);
+   username: req.body.username,
+   phone: req.body.phone,
+   email: req.body.email,
+   address: req.body.address,
+   password: req.body.password,
+   confirmPassword: req.body.confirmPassword
+};
+console.log('here');
+console.log(userData);
+User.create(useData, function (error, dog) {
+        if (error) {
+          return next(error);
+        } else {
+        //  req.session.userId = user._id;
+          return res.redirect('/profile');
+        }
+      });
+*/
+
+
 //  var userData = [name:name, username, phone, email, address, password];
 
 // console.log("after variables was called!");
- console.log(name, username, phone, email, address, password, confirmPassword);
+
 //    console.log("profile was called!");
 //document.write( name, username, phone, email, address, password, confirmPassword);
-  return res.render('profile', { title: 'profile' });
-  //document.write( name, username, phone, email, address, password, confirmPassword);
+//  return res.render('profile', { title: 'profile' });
+//console.log(name, username, phone, email, address, password, confirmPassword);
 
-res.end("yes");
+  //document.write( name, username, phone, email, address, password, confirmPassword);
+//res.end("yes");
 //console.log("we made it to here!");
-  });
+//  });
   User.create({
     name:"Mary",
     username:"HadaLamb",
