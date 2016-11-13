@@ -53,7 +53,7 @@ areas.forEach(function(area, index){
   });
 });
 */
-
+/*
 users.forEach(function(user, index){
   User.find({}, function(err, users) {
     if (!err && !users.length){
@@ -68,7 +68,7 @@ users.forEach(function(user, index){
     }
   })
 })
-
+*/
 User.create({
   name:"Amy Shah",
   usermame:"Amy_Shah",

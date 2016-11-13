@@ -3,6 +3,8 @@ var router = express.Router();
 
 var User = require('../models/user');
 var mid = require('../middleware/middle');
+//var User = require ('./models/user.js');
+
 /*
 // GET /profile
 router.get('/profile', mid.requiresLogin, function(req, res, next) {
@@ -70,20 +72,44 @@ app.get('/',function(req,res){
 // POST /register
 router.post('/profile', function(req, res, next) {
   var name = req.body.name;
-  console.log(name);
+//  console.log(name);
   var username = req.body.username;
   var phone = req.body.phone;
   var email = req.body.email;
   var address = req.body.address;
   var password = req.body.password;
   var confirmPassword =req.body.confirmPassword;
- console.log(name, username, phone, email, address, password);
- console.log("after variables was called!");
+//  var userData = [name:name, username, phone, email, address, password];
 
-    console.log("profile was called!");
+// console.log("after variables was called!");
+ console.log(name, username, phone, email, address, password, confirmPassword);
+//    console.log("profile was called!");
+//document.write( name, username, phone, email, address, password, confirmPassword);
   return res.render('profile', { title: 'profile' });
+  //document.write( name, username, phone, email, address, password, confirmPassword);
+
 res.end("yes");
+//console.log("we made it to here!");
   });
+  User.create({
+    name:"Mary",
+    username:"HadaLamb",
+    phone:"555-555-5678",
+    email:"mlamb@yahoo.com",
+    address:"15 Shepard st  Shepardsville KY 40216",
+    password:"ml2345"
+  });
+/*
+  User.create({
+    var name = req.body.name;
+  //  console.log(name);
+    var username = req.body.username;
+    var phone = req.body.phone;
+    var email = req.body.email;
+    var address = req.body.address;
+    var password = req.body.password;
+  });
+*/
 /*
   if (req.body.email &&
     req.body.name &&
@@ -99,17 +125,16 @@ res.end("yes");
         return next(err);
       }
 
-
+*/
+/*
       // create object with form input
-      var userData = {
-        email: req.body.email,
-        name: req.body.name,
-        phone: req.body.phone,
-        address: req.body.address,
-        password: req.body.password
+      var userData = { name, username, phone, email, address, password
       };
-
+*/
       // use schema's `create` method to insert document into Mongo
+
+
+/*
       User.create(userData, function (error, user) {
         if (error) {
           return next(error);
@@ -118,6 +143,7 @@ res.end("yes");
           return res.redirect('/profile');
         }
       });
+    */
 /*    } else {
       var err = new Error('All fields required.');
       err.status = 400;
