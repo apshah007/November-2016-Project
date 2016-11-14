@@ -36,22 +36,4 @@ html
             input(type='checkbox')
             |  Remember me
         button.btn.btn-default(type='submit', value='submit') Submit
-    //
-      to send the information to the passport.js file about username and password for local authenication
-      <script>
-      var xhr = new XMLHttpRequest();
-      xhr.onreadystatechange = function(){
-      if (xhr.readyState === 4){
-      document.getElementById('username').innerHTML = xhr.responseText;
-      }
-      };
-      xhr.open('POST', 'passport.js');
-      xhr.send(username);
-      xhr.onreadystatechange = function(){
-      if (xhr.readyState === 4){
-      document.getElementById('password').innerHTML = xhr.responseText;
-      }
-      };
-      xhr.open('POST', 'passport.js');
-      xhr.send(password);
-      </script>
+    
