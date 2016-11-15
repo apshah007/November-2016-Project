@@ -21,7 +21,7 @@ app.get('/',function(req,res){
   res.sendfile("index.html");
 */
 // POST /register
-// POST /register
+// send the information from the form to the profile page
 
 router.post('/profile', function(req, res, next) {
 
@@ -34,9 +34,16 @@ router.post('/profile', function(req, res, next) {
   var password = req.body.password;
   var confirmPassword =req.body.confirmPassword;
 
- console.log(name, username, phone, email, address, password);
- console.log("after variables was called!");
- User.create({name, username, phone, email, address, password});
+// console.log(name, username, phone, email, address, password);
+// console.log("after variables was called!");
+User.create({
+  name: name,
+  username:username,
+  phone:phone,
+  email:email,
+  address:address,
+  password:password
+});
 
 //    console.log("profile was called!");
  return res.render('profile', { title: 'profile', name:name,
@@ -47,16 +54,16 @@ router.post('/profile', function(req, res, next) {
   });
 
 
-/*
+
   User.create({
-    name:"Mary",
-    username:"HadaLamb",
-    phone:"555-555-5678",
-    email:"mlamb@yahoo.com",
-    address:"15 Shepard st  Shepardsville KY 40216",
-    password:"ml2345"
+    name:"sary",
+    username:"sdaLamb",
+    phone:"555-553-5678",
+    email:"slamb@yahoo.com",
+    address:"15 Ssepard st  Shepardsville KY 40216",
+    password:"ml3345"
   });
-*/
+
 
 // GET /
 router.get('/index', function(req, res, next) {
@@ -78,5 +85,15 @@ router.get('/current', function(req, res, next) {
 router.get('/hours', function(req, res, next) {
   return res.render('hours', { title: 'hours' });
 });
+
+// GET /hours
+router.get('/printout', function(req, res, next) {
+  User.find({}, function(err, users){
+    return res.render('printout', { title: 'printout', users: users });
+});
+
+});
+
+
 
 module.exports = router;
