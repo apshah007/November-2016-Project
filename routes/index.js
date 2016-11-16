@@ -54,7 +54,7 @@ User.create({
   });
 
 
-
+/*
   User.create({
     name:"sary",
     username:"sdaLamb",
@@ -63,7 +63,7 @@ User.create({
     address:"15 Ssepard st  Shepardsville KY 40216",
     password:"ml3345"
   });
-
+*/
 
 // GET /
 router.get('/index', function(req, res, next) {
