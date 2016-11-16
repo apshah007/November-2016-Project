@@ -24,7 +24,8 @@ app.use(express.static(__dirname + '/public'));
 // view engine setup
 app.set('view engine', 'pug');
 
-app.set('views', __dirname + '\\views');
+//app.set('views', __dirname + '\\views');
+app.set('views', __dirname + '/views');
 
 //for trying to render the index.pug file
 app.get('/', function (req, res) {
