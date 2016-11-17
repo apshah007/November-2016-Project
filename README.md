@@ -3,6 +3,7 @@ Instructions for this application----
 
 --Go to root directory of project: server.js
 --Run ‘npm install’ to install necessary packages
+--To install mongo: https://docs.mongodb.com/manual/administration/install-community/
 --Run ‘mongod’ to start mongo service in a new command window
 --Use nodemon server.js to run on express
 --View the application on localhost:3000
